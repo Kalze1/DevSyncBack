@@ -11,6 +11,7 @@ const Login = require('./routes/login')
 const group = require('./routes/group')
 const report = require('./routes/reporteduser')
 const admin = require('./routes/admin')
+const profile = require('./routes/profile')
 
 const app = express();
 app.use(express.json());
@@ -26,7 +27,7 @@ app.use('/api/login', Login)
 app.use('/api/group', group)
 app.use('/api/report', report)
 app.use('/api/admin', admin)
-// app.use('/api/login', Login)
+app.use('/api/profile', profile)
 
 app.use('/', home)
 

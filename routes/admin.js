@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
         password :"@Kaleab1234"})
     console.log(admins)
     res.send(admins)
-    console.log(admins.language)
+    
 
 })
 
@@ -43,23 +43,6 @@ router.post('/', async (req, res) => {
     res.send(admin)
 })
 
-// router.delete('/:questionId', async (req, res) => {
-//     const questionId = req.params; 
-//     console.log("questionId",res.params)
-  
-//     try {
-//       const deletedQuestion = await Quiz.findByIdAndDelete(questionId);
-  
-//       if (!deletedQuestion) {
-//         return res.status(404).send({ message: 'Question not found' });
-//       }
-  
-//       res.send({ message: 'Question deleted successfully' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).send({ message: 'Error deleting question' });
-//     }
-//   });
 
 
 module.exports = router;

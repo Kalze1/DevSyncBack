@@ -53,11 +53,6 @@ router.delete('/:questionId', async (req, res) => {
     try {
       const deletedQuestion = await Quiz.findByIdAndDelete(questionId);
       console.log(deletedQuestion)
-  
-      if (!deletedQuestion) {
-        return res.status(404).send({ message: 'Question not found' });
-      }
-  
       res.send({ message: 'Question deleted successfully' });
     } catch (error) {
       console.error(error);
